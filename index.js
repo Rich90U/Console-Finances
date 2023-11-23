@@ -96,4 +96,18 @@ function analyseFinances(finances) {
   var greatestIncrease = { amount: 0 };
   var greatestDecrease = { amount: 0 };
 
-}
+  for (var i = 0; i < totalMonths; i++) {
+    
+    var date = finances[i][0];
+    var profitLoss = finances[i][1];
+
+    // Calculate netTotal
+    netTotal += profitLoss;
+
+    // Calculate totalChange 
+    if (i > 0) {
+      var change = profitLoss - finances[i - 1][1];
+      totalChange += change;
+
+    }
+  }   
