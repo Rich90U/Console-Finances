@@ -22,3 +22,13 @@ The financial data is structured as an array of arrays, where each inner array c
 - **Greatest Increase in Profits:** The month and amount of the largest increase in profits.
 - **Greatest Decrease in Profits:** The month and amount of the largest decrease in profits.
 
+## Demonstration of Output 
+
+```plaintext
+Financial Analysis
+-------------------
+Total Months: 86
+Net Total: $38382578.00
+Average Change: $-2315.12
+Greatest Increase in Profits: Feb-2012 ($1926159.00)
+Greatest Decrease in Profits: Sep-2013 ($-2196167.00)
