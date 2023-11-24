@@ -127,14 +127,14 @@ function analyseFinances(finances) {
   // Calculate averageChange
   var averageChange = totalChange / (totalMonths - 1);
 
-  // Display results
+  // Display results in console log
   console.log('Financial Analysis');
   console.log('-------------------');
   console.log('Total Months:$', totalMonths);
   console.log('Net Total:$', netTotal);
   console.log('Average Change:$', averageChange.toFixed(2));
-  console.log('Greatest Increase in Profits:', greatestIncrease.date, greatestIncrease.amount.toFixed(2));
-  console.log('Greatest Decrease in Profits:', greatestDecrease.date, greatestDecrease.amount.toFixed(2));
+  console.log('Greatest Increase in Profits: ', greatestIncrease.date, '($' + greatestIncrease.amount.toFixed(2) + ')');
+  console.log('Greatest Decrease in Profits: ', greatestDecrease.date, '($' + greatestDecrease.amount.toFixed(2) + ')');
 }
 
 analyseFinances(finances);
