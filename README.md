@@ -1,6 +1,6 @@
 # Console-Finances
 
-# Financial Analysis
+## Financial Analysis
 
 This script analyses financial data represented as an array of monthly profits and losses. The provided dataset includes the financial information from January 2010 to February 2017. The analysis calculates the total number of months, net total profits/losses, average monthly change, and identifies the months with the greatest increase and decrease in profits.
 
@@ -22,6 +22,10 @@ The financial data is structured as an array of arrays, where each inner array c
 - **Greatest Increase in Profits:** The month and amount of the largest increase in profits.
 - **Greatest Decrease in Profits:** The month and amount of the largest decrease in profits.
 
+## Link to site
+
+https://rich90u.github.io/Console-Finances/
+
 ## Demonstration of Output 
 
 ```plaintext
@@ -32,3 +36,4 @@ Net Total: $38382578.00
 Average Change: $-2315.12
 Greatest Increase in Profits: Feb-2012 ($1926159.00)
 Greatest Decrease in Profits: Sep-2013 ($-2196167.00)
+
