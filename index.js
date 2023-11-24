@@ -96,6 +96,7 @@ function analyseFinances(finances) {
   var greatestIncrease = { amount: 0 };
   var greatestDecrease = { amount: 0 };
 
+  // Iterate through the finances array
   for (var i = 0; i < totalMonths; i++) {
     
     var date = finances[i][0];
@@ -109,5 +110,31 @@ function analyseFinances(finances) {
       var change = profitLoss - finances[i - 1][1];
       totalChange += change;
 
+      // Check for the greatest increase
+      if (change > greatestIncrease.amount) {
+        greatestIncrease.amount = change;
+        greatestIncrease.date = date;
+      }
+
+      // Check for the greatest decrease
+      if (change < greatestDecrease.amount) {
+        greatestDecrease.amount = change;
+        greatestDecrease.date = date;
+      }
     }
-  }   
+  }
+
+  // Calculate averageChange
+  var averageChange = totalChange / (totalMonths - 1);
+
+  // Display results
+  console.log('Financial Analysis');
+  console.log('-------------------');
+  console.log('Total Months:$', totalMonths);
+  console.log('Net Total:$', netTotal);
+  console.log('Average Change:$', averageChange.toFixed(2));
+  console.log('Greatest Increase in Profits:', greatestIncrease.date, greatestIncrease.amount.toFixed(2));
+  console.log('Greatest Decrease in Profits:', greatestDecrease.date, greatestDecrease.amount.toFixed(2));
+}
+
+analyseFinances(finances);
